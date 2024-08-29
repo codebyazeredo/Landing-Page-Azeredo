@@ -1,0 +1,164 @@
+/* Navbar.css */
+.navbar {
+  display: flex;
+  background: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente escuro */
+  color: white;
+  padding: 1vh 2vh;
+  position: fixed;
+  width: 100%; /* Ocupa toda a largura da tela */
+  top: 0;
+  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
+  z-index: 1000; /* Acima do banner e outros elementos */
+  justify-content: space-between; /* Espaça itens na navbar */
+  align-items: center;
+  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
+}
+
+.button{
+  background-color: #59df00;
+ 
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+.button:hover{
+  transform: scale(1.1);
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%; /* Ocupa toda a largura disponível */
+  max-width: 1200px; /* Define uma largura máxima para centralizar a navbar */
+  margin: 0 auto; /* Centraliza a navbar */
+  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
+}
+
+.nav-links {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin: 0 15px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ffffff; /* Cor de destaque */
+  transform: scale(1.15); /* Efeito de zoom suave */
+}
+
+/* Ajustes para o botão */
+.button-container {
+  display: flex;
+  align-items: center;
+  z-index: 1000; /* Garantir que o botão esteja acima dos links */
+  border-color: #ffffff;
+}
+
+/* Menu Toggle Styles */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  z-index: 1100; /* Acima dos links de navegação */
+}
+
+.menu-toggle .bar {
+  background-color: white;
+  height: 3px;
+  width: 25px;
+  margin: 3px 0;
+}
+
+/* Menu Links */
+.menu-links {
+  display: none; /* Esconde o menu por padrão */
+  flex-direction: column;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 60px; /* Espaçamento abaixo da navbar */
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.9); /* Fundo semi-transparente escuro */
+  width: 60%; /* Ocupa toda a largura da tela */
+  border-radius: 8px; /* Bordas arredondadas */
+  padding: 1rem; /* Adiciona padding interno para melhor espaçamento */
+  z-index: 999; /* Acima do banner e outros elementos */
+  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
+  align-items: center; /* Alinha os itens no centro */
+  text-align: center; /* Centraliza o texto dos itens do menu */
+}
+
+/* Show menu when active */
+.menu-links.active {
+  margin-top: 24px;
+  display: flex;
+}
+
+.menu-links li {
+  margin: 10px 0;
+}
+
+/* Media Queries */
+@media (min-width: 769px) {
+  .nav-links {
+    display: flex; /* Exibe os links de navegação em telas grandes */
+  }
+
+  .menu-toggle {
+    display: none; /* Esconde o botão de menu em telas grandes */
+  }
+
+  .menu-links {
+    display: none; /* Garante que o menu de opções não esteja visível em telas grandes */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center; /* Alinha itens ao centro */
+    padding: 10px; /* Reduz o padding em telas menores */
+  }
+
+  .nav-links {
+    display: none; /* Esconde os links de navegação padrão */
+  }
+
+  .menu-toggle {
+    display: flex; /* Exibe o botão de menu em telas pequenas */
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    width: 60%; /* Ocupa toda a largura da tela */
+    padding: 0; /* Remove o padding para que a largura seja 100% */
+  }
+
+  .menu-links {
+    width: 100%; /* Ocupa toda a largura da tela em modo mobile */
+  }
+}
+
+@media (max-width: 480px) {
+  .nav-links a {
+    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+  }
+
+  .menu-toggle .bar {
+    width: 20px; /* Ajusta a largura das barras do menu toggle */
+    height: 2px; /* Ajusta a altura das barras do menu toggle */
+  }
+}
+

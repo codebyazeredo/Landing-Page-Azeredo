@@ -1,0 +1,33 @@
+/* App.css */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 90vh;
+}
+
+.content {
+  flex: 1;
+  padding: 10px;
+  padding-top: 10px; /* Ajuste para acomodar a altura da navbar + algum espaço */
+  padding-bottom: 10px;
+  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%; /* Garante que a content ocupe toda a largura */
+}
+
+main {
+  flex: 1;
+  padding: 10px;
+  max-width: 100%; /* Garante que o conteúdo não ultrapasse a largura da tela */
+  box-sizing: border-box; /* Evita overflow horizontal */
+}
+
+h2 {
+  margin-top: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* Suaviza a rolagem para âncoras */
+}
