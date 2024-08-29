@@ -135,7 +135,7 @@
   color: white;
   font-weight: bold;
 }
-@media (max-width: 670px) {
+@media (max-width: 800px) {
   .sobre{
    transform: translateX(-0.01em);
   }
@@ -145,7 +145,7 @@
   .carousel{
    .carousel-inner {
      display: flex;
-     width: 85%;
+     width: 75%;
      overflow: hidden;
    }
   }
