@@ -63,12 +63,13 @@
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 800px) {
   .banner {
     height: 30vh;
   }
 
   .dots {
+    transform: translateX(-50%);
     bottom: 5px;
     gap: 6px;
   }
