@@ -116,7 +116,7 @@ const Sobre = () => {
         <h2 className='titulo-sobre'>Sobre Mim</h2>
         <p className='texto-sobre'>
           Olá! Me chamo Matheus Azeredo, como muitos, sou um entusiasta da tecnologia
-          com muita paixão em CRIAR. Fui DJ por um tempo, o que me ajudou a desenvolver habilidades 
+          com muita paixão em CRIAR. Sou um DJ aposentado, o que me fez desenvolver minhas habilidades 
           sociais e a pensar fora da caixa. Hoje em dia, uso essa criatividade
           para resolver problemas de forma inovadora.
         </p>
