@@ -1,25 +1,23 @@
-/* Navbar.css */
 .navbar {
   display: flex;
-  background: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente escuro */
+  background: rgba(0, 0, 0, 0.8);
   color: white;
   padding: 1vh 2vh;
   position: fixed;
-  width: 100%; /* Ocupa toda a largura da tela */
+  width: 100%;
   top: 0;
   left: 0;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Sombra sutil */
-  z-index: 1000; /* Acima do banner e outros elementos */
-  justify-content: space-between; /* Espaça itens na navbar */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000; 
+  justify-content: space-between; 
   align-items: center;
-  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
-}
+  box-sizing: border-box; 
 
 .button{
   background-color: #59df00;
- 
   transition: color 0.3s ease, transform 0.3s ease;
 }
+
 .button:hover{
   transform: scale(1.1);
 }
@@ -28,10 +26,10 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%; /* Ocupa toda a largura disponível */
-  max-width: 1200px; /* Define uma largura máxima para centralizar a navbar */
-  margin: 0 auto; /* Centraliza a navbar */
-  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
+  width: 100%; 
+  max-width: 1200px; 
+  margin: 0 auto; 
+  box-sizing: border-box; 
 }
 
 .nav-links {
@@ -53,24 +51,22 @@
 }
 
 .nav-links a:hover {
-  color: #ffffff; /* Cor de destaque */
-  transform: scale(1.15); /* Efeito de zoom suave */
+  color: #ffffff; 
+  transform: scale(1.15); 
 }
 
-/* Ajustes para o botão */
 .button-container {
   display: flex;
   align-items: center;
-  z-index: 1000; /* Garantir que o botão esteja acima dos links */
+  z-index: 1000; 
   border-color: #ffffff;
 }
 
-/* Menu Toggle Styles */
 .menu-toggle {
   display: none;
   flex-direction: column;
   cursor: pointer;
-  z-index: 1100; /* Acima dos links de navegação */
+  z-index: 1100;  
 }
 
 .menu-toggle .bar {
@@ -80,27 +76,25 @@
   margin: 3px 0;
 }
 
-/* Menu Links */
 .menu-links {
-  display: none; /* Esconde o menu por padrão */
+  display: none;  
   flex-direction: column;
   list-style-type: none;
   margin: 0;
   padding: 0;
   position: absolute;
-  top: 60px; /* Espaçamento abaixo da navbar */
+  top: 60px;  
   left: 0;
-  background-color: rgba(0, 0, 0, 0.9); /* Fundo semi-transparente escuro */
-  width: 60%; /* Ocupa toda a largura da tela */
-  border-radius: 8px; /* Bordas arredondadas */
-  padding: 1rem; /* Adiciona padding interno para melhor espaçamento */
-  z-index: 999; /* Acima do banner e outros elementos */
-  box-sizing: border-box; /* Inclui padding e borda nas dimensões da caixa */
-  align-items: center; /* Alinha os itens no centro */
-  text-align: center; /* Centraliza o texto dos itens do menu */
+  background-color: rgba(0, 0, 0, 0.9);  
+  width: 60%;  
+  border-radius: 8px;  
+  padding: 1rem;  
+  z-index: 999;  
+  box-sizing: border-box;  
+  align-items: center;  
+  text-align: center; 
 }
 
-/* Show menu when active */
 .menu-links.active {
   margin-top: 24px;
   display: flex;
@@ -110,55 +104,54 @@
   margin: 10px 0;
 }
 
-/* Media Queries */
 @media (min-width: 769px) {
   .nav-links {
-    display: flex; /* Exibe os links de navegação em telas grandes */
+    display: flex;
   }
 
   .menu-toggle {
-    display: none; /* Esconde o botão de menu em telas grandes */
+    display: none; 
   }
 
   .menu-links {
-    display: none; /* Garante que o menu de opções não esteja visível em telas grandes */
+    display: none; 
   }
 }
 
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: center; /* Alinha itens ao centro */
-    padding: 10px; /* Reduz o padding em telas menores */
+    align-items: center;
+    padding: 10px; 
   }
 
   .nav-links {
-    display: none; /* Esconde os links de navegação padrão */
+    display: none; 
   }
 
   .menu-toggle {
-    display: flex; /* Exibe o botão de menu em telas pequenas */
+    display: flex; 
   }
 
   .navbar-container {
     flex-direction: column;
-    width: 60%; /* Ocupa toda a largura da tela */
-    padding: 0; /* Remove o padding para que a largura seja 100% */
+    width: 60%; 
+    padding: 0; 
   }
 
   .menu-links {
-    width: 100%; /* Ocupa toda a largura da tela em modo mobile */
+    width: 100%; 
   }
 }
 
 @media (max-width: 480px) {
   .nav-links a {
-    font-size: 14px; /* Reduz o tamanho da fonte para telas menores */
+    font-size: 14px;
   }
 
   .menu-toggle .bar {
-    width: 20px; /* Ajusta a largura das barras do menu toggle */
-    height: 2px; /* Ajusta a altura das barras do menu toggle */
+    width: 20px; 
+    height: 2px; 
+    }
   }
 }
-

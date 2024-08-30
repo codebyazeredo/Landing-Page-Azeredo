@@ -1,4 +1,3 @@
-// Navbar.js
 import { useState } from 'react';
 import '../styles/Navbar.css';
 import Button from './Button';

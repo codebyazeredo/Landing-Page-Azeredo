@@ -13,7 +13,6 @@ const Banner = () => {
     const videoElement = document.querySelector('.video-container video');
     if (videoElement) {
       videoElement.play().catch(error => {
-        // Manipule o erro de autoplay caso ocorra (por exemplo, usuário não permitiu o autoplay)
         console.log("Autoplay foi bloqueado", error);
       });
     }

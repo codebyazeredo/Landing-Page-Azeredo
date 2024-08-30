@@ -4,7 +4,7 @@ const Projetos = () => {
     return (
         <section className='container-proj '>
             <h1 className='titulo-proj' id='projetos'>Projetos</h1>
-            <h4 className='sub-t'>Confira este e projetos em andamento nas seguintes plataformas</h4>
+            <h4 className='sub-t'>Confira este e outros projetos em andamento nas seguintes plataformas</h4>
             <div className='cards-container'>
                 
             <a href="https://github.com/codebyazeredo">

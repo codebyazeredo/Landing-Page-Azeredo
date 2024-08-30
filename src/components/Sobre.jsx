@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react';
-import '../styles/Sobre.css'; // Adicione seus estilos personalizados aqui
+import '../styles/Sobre.css'; 
 
 const Sobre = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [itemsToShow, setItemsToShow] = useState(4); // Estado para o número de itens a mostrar
+  const [itemsToShow, setItemsToShow] = useState(4); 
 
   const stacks = [
     { icon: "devicon-java-plain colored" },
@@ -30,7 +30,6 @@ const Sobre = () => {
     setCurrentIndex((prevIndex) => (prevIndex - itemsToShow + totalItems) % totalItems);
   };
 
-  // Ajuste do número de itens mostrados com base no tamanho da tela
   useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth <= 768) {
@@ -41,7 +40,7 @@ const Sobre = () => {
     };
 
     window.addEventListener('resize', handleResize);
-    handleResize(); // Chama uma vez para configurar no início
+    handleResize(); 
 
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -51,19 +50,16 @@ const Sobre = () => {
     return () => clearInterval(interval);
   }, [currentIndex, itemsToShow]);
 
-
-  // Função para determinar a cor da barra de progresso
   const getProgressColor = (percentage) => {
     if (percentage <= 20) return '#f44336'; // Vermelho
     if (percentage <= 45) return '#ff9800'; // Laranja
     if (percentage <= 65) return '#acb843'; // Amarelo
-    if (percentage <= 75) return '#4caf50'; // Verde claro
-    if (percentage <= 85) return '#44922e'; // Verde
-    return '#00ff00'; 
+    if (percentage <= 75) return '#4caf50'; // Verde fraco
+    if (percentage <= 85) return '#44922e'; // Verde Escuro
+    return '#00ff00'; // Verde Claro
   };
 
-  // Habilidades ativas (tecnológicas)
-  const activeSkills = [
+  const activeSkills = [ 
     { name: 'Desenvolvimento Front-End', level: 88 },
     { name: 'Desenvolvimento Back-End', level: 88 },
     { name: 'Git', level: 83 },
@@ -78,7 +74,6 @@ const Sobre = () => {
     { name: 'UI/UX', level: 65 },
   ];
 
-  // Habilidades passivas (socioemocionais)
   const passiveSkills = [
     { name: 'Aprendizado', level: 100 },
     { name: 'Criatividade', level: 100 },

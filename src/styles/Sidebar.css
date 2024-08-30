@@ -1,17 +1,16 @@
-/* Sidebar */
 .sidebar {
   position: fixed;
   top: 0;
   margin-top: 24vh;
-  left: -50px; /* Ajuste para o tamanho dos ícones e a largura da área fechada */
-  width: 70px; /* Largura compacta para a sidebar fechada */
+  left: -50px; 
+  width: 70px; 
   height: 50%;
   background: rgba(0, 0, 0, 0.659);
   transition: left 0.3s ease;
   border-radius: 8px;
   padding: 15px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-  overflow: hidden; /* Oculta qualquer conteúdo que ultrapasse o contêiner */
+  overflow: hidden; 
   display: flex;
   align-items: center;
   justify-content: end;
@@ -21,7 +20,7 @@
 .sidebar-title {
   color: #fff;
   text-align: center;
-  display: none; /* Oculta o título na versão compacta */
+  display: none;
 }
 
 .sidebar-menu {
@@ -35,11 +34,9 @@
 }
 
 .icon-item {
-
   margin: 15px 0;
   margin-top: 5px;
   position: flex;
-  
 }
 
 .icon-link {
@@ -49,26 +46,24 @@
   transition: color 0.3s ease;
 }
 
-.icon-link.github:hover {
-  
-  color: #9500ff;
-   /* Cor do ícone do GitHub */
+.icon-link.github:hover { 
+  color: #9500ff;  
 }
 
 .icon-link.instagram:hover {
-  color: #e4405f; /* Cor do ícone do Instagram */
+  color: #e4405f;
 }
 
 .icon-link.linkedin:hover {
-  color: #0077b5; /* Cor do ícone do LinkedIn */
+  color: #0077b5; 
 }
 
 .icon-link.email:hover {
-  color: #c71610; /* Cor do ícone do Email */
+  color: #c71610; 
 }
 
 .icon-link.figma:hover {
-  color:rgb(0, 242, 255);/* Cor do ícone do figma */
+  color:rgb(0, 242, 255);
 }
 
 .sidebar:hover .icon-item:hover::after {

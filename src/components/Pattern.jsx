@@ -1,9 +1,8 @@
-
 import '../styles/Pattern.css';
 
 const Pattern = () => {
   return (
-          <div className="container" />
+    <div className="container" />
   );
 };
 

@@ -1,12 +1,9 @@
 body {
-  /* Configurações básicas para cobrir a tela inteira */
   margin: 0;
   padding: 0;
   width: 100vw;
   height: 90vh;
-  
-  /* Configuração para o fundo escuro com gradiente */
-  background: #121212; /* Cor de fallback */
+  background: #121212; 
   background: linear-gradient(
     135deg,
     #121212 25%,
@@ -19,17 +16,14 @@ body {
   );
   background-size: 40px 40px;
 
-  /* Animação de movimento */
   animation: move 4s linear infinite;
 
-  /* Flexbox para centralizar o conteúdo */
   display: flex;
   justify-content: center;
   align-items: center;
   box-sizing: border-box;
 }
 
-/* Animação do fundo */
 @keyframes move {
   0% {
     background-position: 0 0;
@@ -39,23 +33,21 @@ body {
   }
 }
 
-/* Estilos responsivos para garantir que cubra toda a tela */
 body {
   width: 100%;
   height: 90%;
 }
 
-/* Adicional para garantir que a animação funcione corretamente em dispositivos móveis */
 @media (max-width: 768px) {
   body {
-    background-size: 30px 30px; /* Ajusta o tamanho do padrão em telas menores */
-    animation: move 6s linear infinite; /* Pode aumentar o tempo para um movimento mais suave em dispositivos móveis */
+    background-size: 30px 30px;
+    animation: move 6s linear infinite;
   }
 }
 
 @media (max-width: 480px) {
   body {
-    background-size: 20px 20px; /* Ainda menor para telas muito pequenas */
-    animation: move 8s linear infinite; /* Animação mais lenta para evitar distrair em dispositivos muito pequenos */
+    background-size: 20px 20px; 
+    animation: move 8s linear infinite; 
   }
 }
