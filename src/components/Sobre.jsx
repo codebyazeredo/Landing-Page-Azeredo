@@ -3,6 +3,7 @@ import '../styles/Sobre.css'; // Adicione seus estilos personalizados aqui
 
 const Sobre = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [itemsToShow, setItemsToShow] = useState(4); // Estado para o número de itens a mostrar
 
   const stacks = [
     { icon: "devicon-java-plain colored" },
@@ -19,7 +20,6 @@ const Sobre = () => {
     { icon: "devicon-figma-plain" },
   ];
 
-  const itemsToShow = 4;
   const totalItems = stacks.length;
 
   const nextSlide = () => {
@@ -30,10 +30,27 @@ const Sobre = () => {
     setCurrentIndex((prevIndex) => (prevIndex - itemsToShow + totalItems) % totalItems);
   };
 
+  // Ajuste do número de itens mostrados com base no tamanho da tela
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 768) {
+        setItemsToShow(3);
+      } else {
+        setItemsToShow(4);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); // Chama uma vez para configurar no início
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   useEffect(() => {
     const interval = setInterval(nextSlide, 2000);
     return () => clearInterval(interval);
-  }, [currentIndex]);
+  }, [currentIndex, itemsToShow]);
+
 
   // Função para determinar a cor da barra de progresso
   const getProgressColor = (percentage) => {

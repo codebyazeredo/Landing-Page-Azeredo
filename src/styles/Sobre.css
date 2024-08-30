@@ -145,8 +145,9 @@
   .carousel{
    .carousel-inner {
      display: flex;
-     width: 88%;
-     overflow: hidden;
+     width: 75%;
+     overflow:hidden;
+     
    }
   }
  }
