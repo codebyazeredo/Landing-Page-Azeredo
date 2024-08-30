@@ -1,5 +1,4 @@
-
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import '../styles/Banner.css';
 
 const videos = [
@@ -10,6 +9,16 @@ const videos = [
 const Banner = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
+  useEffect(() => {
+    const videoElement = document.querySelector('.video-container video');
+    if (videoElement) {
+      videoElement.play().catch(error => {
+        // Manipule o erro de autoplay caso ocorra (por exemplo, usuário não permitiu o autoplay)
+        console.log("Autoplay foi bloqueado", error);
+      });
+    }
+  }, [currentIndex]);
+
   const handleDotClick = (index) => {
     setCurrentIndex(index);
   };
@@ -17,7 +26,15 @@ const Banner = () => {
   return (
     <div className='banner'>
       <div className='video-container'>
-        <video key={currentIndex} autoPlay loop muted>
+        <video 
+          key={currentIndex} 
+          autoPlay 
+          loop 
+          muted 
+          playsInline 
+          disablePictureInPicture 
+          controls={false}
+        >
           <source src={videos[currentIndex]} type='video/mp4' />
         </video>
       </div>
